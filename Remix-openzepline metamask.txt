@@ -1,0 +1,24 @@
+https://moralis.io/openzeppelin-in-remix-importing-openzeppelin-contracts-in-remix/
+
+Openzeppelin connection
+1) Open Metamask with added goerli or any other test network
+2) create smart contract on browser Remix
+3) Write smart contract
+
+//SPDX-License-Identifier: MIT
+pragma solidity ^0.8.0;
+
+import “https://github.com/OpenZeppelin/openzeppelin-contracts/blob/master/contracts/token/ERC20/ERC20.sol”;
+
+contract MoralisSmartToken is ERC20 {
+  constructor(string memory _name, string memory _symbol) ERC20(_name, _symbol) {
+    _mint(msg.sender, 1000 * 10 **18);
+  }
+}
+
+4) While deploying select environment as InjectedProvider-Metamask
+
+5) Then after deploy contract
+
+6) copy contract address and import in metamask.
+then test while putting string in contract output and ckeck.
